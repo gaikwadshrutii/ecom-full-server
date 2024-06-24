@@ -3,7 +3,7 @@
 const asyncHandler = require("express-async-handler")
 const Product = require("../models/Product")
 
-exports.PublicGetProduct = asyncHandler(async (req, res) => {
+exports.PublicGetProducts = asyncHandler(async (req, res) => {
     const result = await Product.find({ active: true })
     res.json({ message: "Product Fetch Success", result })
 })
